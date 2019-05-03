@@ -9,6 +9,8 @@ import { ResaServiceService } from '../services/resa-service.service';
 })
 export class Resa2Component implements OnInit {
 
+  mode_access: string;
+
   constructor(private resaService: ResaServiceService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -41,4 +43,12 @@ export class Resa2Component implements OnInit {
     this.router.navigateByUrl('login');
   }
 
+   // creer un compte
+   public goCreerCompte(): void {
+    this.router.navigateByUrl('creerCompte');
+  }
+ 
+  // Faire methode Login() + addResa + goInfos path: 'infos' + goAgences path: 'agences'
+// + en fonction du modeaccess modif form
+// + à faire p. voir ou modifier resa
 }

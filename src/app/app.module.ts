@@ -6,16 +6,17 @@ import { AppComponent } from './app.component';
 
 import { Resa2Component } from './resa2/resa2.component';
 import { Resa1Component } from './resa1/resa1.component';
-import { ModifResaComponentComponent } from './modif-resa-component/modif-resa-component.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ProvidersFeature } from '@angular/core/src/render3';
+import { ModifResaComponentComponent } from './modif-resa-component/modif-resa-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Resa2Component,
-    Resa1Component
+    Resa1Component,
+    ModifResaComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +40,7 @@ import { ProvidersFeature } from '@angular/core/src/render3';
       // },
       // {
       //   path: 'infos',
-      //   component: Resa1Component
+      //   component: QuiSommesNous
       // },
       {
         path: 'modifResa',
@@ -49,8 +50,18 @@ import { ProvidersFeature } from '@angular/core/src/render3';
       //   path: 'login',
       //   component: Login
       // },
-  ],
-  Provider: [],
+      // {
+      //   path: 'creerCompte',
+      //   component: CreerCompte
+      // },
+       // {
+      //   path: 'agences',
+      //   component: Agences
+      // },
+    ])
+    ],
+  Providers: [],
   bootstrap: [AppComponent]
-})
+ })
 export class AppModule { }
+

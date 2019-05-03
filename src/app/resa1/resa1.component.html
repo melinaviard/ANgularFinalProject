@@ -1,0 +1,32 @@
+<div id="header">
+    <div id="menu">
+      <div id="submenu">
+       
+      <!-- Menu -->
+      <div id="submenu">
+        <a (click)="goAccueil()" style='cursor: pointer'>Accueil</a></div>
+      <div id="submenu">
+     <a (click)="goResa()"  style='cursor: pointer'>Louer un véhicule</a></div>
+      <div id="submenu">
+        <a (click)="goContact()" style='cursor: pointer'>Contact</a></div>
+      <div id="submenu">
+        <a (click)="goQuisommesnous()" style='cursor: pointer'>Qui sommes-nous ?</a></div>
+    
+      <div id="finmenu">
+        <a (click)="goUpdateResa()" style='cursor: pointer'>Voir ou modifier une réservation</a></div>
+        <div id="finmenu">
+  
+      <a (click)="goLogin()" style='cursor: pointer'>Mon compte</a></div>
+    </div>
+  
+    <img src="{{ recipe.cover_photo ? recipe.cover_photo : '/assets/emptybowl.jpg' }} " /> <!-- Image à changer par logo !-->
+  
+    <div id="bandeau">Location de citadines, familiales, SUV et utilitaires </div>
+  </div>
+  
+  <!-- Form pmour recherche vehicule-->
+  <!--Afficher vehicules correspondant à la recherche -->
+  <app-recipe-summary *ngFor="let recipe of recipes" [recipe]="recipe" (userClick)="userClickedOnRecipe($event)"> </app-recipe-summary>
+
+
+  <!-- Mettre footer-->
