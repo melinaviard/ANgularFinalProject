@@ -25,16 +25,128 @@
       
       </div> 
   
-  <!-- Form pmour recherche vehicule-->
+
+
+  <!-- Form pour recherche vehicule-->
   <div id="form-rechercheVehicule"> 
+
       <div class="form-group">
-          <input class="form-control" [(ngModel)]="resa_in_progress.agenceDebut" type="text" placeholder="agence Depart"
-            name="agenceDebutSel" />
-        </div>
+        
 
-  </div>
-  <!--Afficher vehicules correspondant à la recherche -->
-  <app-recipe-summary *ngFor="let recipe of recipes" [recipe]="recipe" (userClick)="userClickedOnRecipe($event)"> </app-recipe-summary>
+         <!-- Menu deroulant pour agence debut-->
+         <div class="dropdown">
+            <button class="resa_in_progress.agenceDebut" type="button" id="resa_in_progress.agenceDebut" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Agence d'emprunt :            <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="resa_in_progress.agenceDebut">
+            <li><a href="#" title="agence1">Lyon</a></li>
+            <li><a href="#" title="agence2">Brest</a></li>
+            <li><a href="#" title="agence3">Paris</a></li>
+            <li><a href="#" title="agence4">Marseille</a></li>
+            <li><a href="#" title="agence5">Strasbourg</a></li>
+            <li><a href="#" title="agence6">Montpellier</a></li>
+            <li><a href="#" title="agence7">Lille</a></li>
+            <li><a href="#" title="agence8">Bourges</a></li>
+            <li><a href="#" title="agence9">Clermont</a></li>
+            <li><a href="#" title="agence10">Tulle</a></li>   
+            </ul>
+            </div>
+
+       <!-- Menu deroulant pour agence fin-->
+       <div class="dropdown">
+          <button class="resa_in_progress.agenceDebut" type="button" id="resa_in_progress.agenceFin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Agence de retour :        <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="resa_in_progress.agenceFin">
+          <li><a href="#" title="agence1">Lyon</a></li>
+          <li><a href="#" title="agence2">Brest</a></li>
+          <li><a href="#" title="agence3">Paris</a></li>
+          <li><a href="#" title="agence4">Marseille</a></li>
+          <li><a href="#" title="agence5">Strasbourg</a></li>
+          <li><a href="#" title="agence6">Montpellier</a></li>
+          <li><a href="#" title="agence7">Lille</a></li>
+          <li><a href="#" title="agence8">Bourges</a></li>
+          <li><a href="#" title="agence9">Clermont</a></li>
+          <li><a href="#" title="agence10">Tulle</a></li>   
+          </ul>
+          </div>
 
 
-  <!-- Mettre footer-->
+<!-- Input calendar for dateDebut-->
+<div class="mbsc-col-sm-12 mbsc-col-md-4">
+    <label>
+        Mobile
+        <input ng-model="dateDebut" mobiscroll-calendar="mobileSettings" data-input-style="box" data-label-style="stacked" />
+    </label>
+</div>
+
+        <!-- Input calendar for dateFin-->
+<div class="mbsc-col-sm-12 mbsc-col-md-4">
+    <label>
+        Mobile
+        <input ng-model="dateFin" mobiscroll-calendar="mobileSettings" data-input-style="box" data-label-style="stacked" />
+    </label>
+</div>
+<!-- Checkbox Type vehciule -->
+      <label>Type du véhicule : </label>
+      <div class="checkbox-type">
+          <label class="checbkox"> 
+                <input type="checkbox" name="type" ngModel="vehicule_recherche.type.citadine"> Renault
+              </label><br/>
+              <label class="checkbox" > 
+                  <input type="checkbox" name="marque" ngModel="vehicule_recherche.marque.familiale"> Peugeot
+      
+               </label><br/>
+               <label class="checbkox"> 
+                  <input type="checkbox" name="type" ngModel="vehicule_recherche.type.SUV"> Renault
+                </label><br/>
+                <label class="checbkox"> 
+                    <input type="checkbox" name="type" ngModel="vehicule_recherche.type.utilitaire"> Renault
+                  </label><br/>
+              <tt>value1 = {{checkboxModel.citadine}}</tt><br/>
+              <tt>value2 = {{checkboxModel.familiale}}</tt><br/>
+              <tt>value1 = {{checkboxModel.SUV}}</tt><br/>
+              <tt>value1 = {{checkboxModel.utilitaire}}</tt><br/>
+    
+              <!-- Checbox nombrePlaces -->
+              <label>Type du véhicule : </label>
+              <div class="checkbox-type">
+                  <label class="checbkox"> 
+                        <input type="checkbox" name="type" ngModel="vehicule_recherche.nombrePlaces.3"> 3
+                      </label><br/>
+                      <label class="checkbox" > 
+                          <input type="checkbox" name="marque" ngModel="vehicule_recherche.nombrePlaces.4"> 4
+              
+                       </label><br/>
+                       <label class="checbkox"> 
+                          <input type="checkbox" name="type" ngModel="vehicule_recherche.nombrePlaces.5"> 5
+                        </label><br/>
+                        <label class="checbkox"> 
+                            <input type="checkbox" name="type" ngModel="vehicule_recherche.nombrePlaces.7"> 7
+                          </label><br/>
+                      <tt>value1 = {{checkboxModel.3}}</tt><br/>
+                      <tt>value2 = {{checkboxModel.4}}</tt><br/>
+                      <tt>value1 = {{checkboxModel.5}}</tt><br/>
+                      <tt>value1 = {{checkboxModel.7}}</tt><br/>
+
+
+<!-- Checkbox marque     -->
+<label>Marque du véhicule : </label>
+<div class="checkbox-marque">
+    <label class="checbkox"> 
+          <input type="checkbox" name="marque" ngModel="vehicule_recherche.marque.Renault"> Renault
+        </label><br/>
+        <label class="checkbox" > 
+            <input type="checkbox" name="marque" ngModel="vehicule_recherche.marque.Peugeot"> Peugeot
+
+         </label><br/>
+        <tt>value1 = {{checkboxModel.Renault}}</tt><br/>
+        <tt>value2 = {{checkboxModel.Peugeot}}</tt><br/>
+
+ 
+<!-- 
+Afficher vehicules correspondant à la recherche 
+  <app-recipe-summary *ngFor="let vehicule of vehicules" [vehicule]="vehicule" (userClick)="userClickedOnRecipe($event)"> </app-recipe-summary>
+ -->
+
+  <!-- Mettre footer = cc depuis resa 2 une fois arrivé à afficher images-->

@@ -66,24 +66,28 @@ export class Resa1Component implements OnInit {
           }
 
 
-             // A faire :
+            // A faire :
+// Faire Resa 1 html
 
-             // + Reprendre resa 1 et resa 2 : terminer, verifier
+// + dans resa 2
+// Faire methode Login() + addResa + goInfos path: 'infos' + goAgences path: 'agences'
+// + en fonction du modeaccess modif form
+// + dans html Afficher vehicules qui collent avec le vehicule recherché, l'agence de départ et les dates
 
-            // + Faire voir ou modifeier resa
+         // + Reprendre resa 1 et resa 2 : terminer, verifier
 
-         // + Ces methodes : à mettre dans voir ou modifier resa
-            // public updateRecipe(recipe: Recipe): void {
-            //   this.recipeService.updateRecipe(this.recipe_in_progress).subscribe(
-            //     (response) => {
-            //       this.router.navigateByUrl('/recipes');
-            //     }
-            //   );
-            // }
-            // public addUpdateResaClicked(): void {
-            //   this.updateResa(this.resa_in_progress);
-            //   this.addResa(this.resa_in_progress);
-            //   }
+        // + Faire voir ou modifier resa
 
-           // + dans html Afficher vehicules qui collent avec le vehicule recherché, l'agence de départ et les dates
-  }
+     // + Ces methodes : à mettre dans voir ou modifier resa
+        // public updateRecipe(recipe: Recipe): void {
+        //   this.recipeService.updateRecipe(this.recipe_in_progress).subscribe(
+        //     (response) => {
+        //       this.router.navigateByUrl('/recipes');
+        //     }
+        //   );
+        // }
+        // public addUpdateResaClicked(): void {
+        //   this.updateResa(this.resa_in_progress);
+        //   this.addResa(this.resa_in_progress);
+        //   }
+}

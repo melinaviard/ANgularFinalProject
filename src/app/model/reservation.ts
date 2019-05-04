@@ -1,6 +1,7 @@
 
 
 export class Reservation {
+    // tslint:disable-next-line:variable-name
     public id_reservation: number;
    public dateResa: string; // date + h
    public dateDebut: string; // date + h
@@ -8,6 +9,7 @@ export class Reservation {
    public agenceDebut: string;
    public agenceFin: string;
 
+   // tslint:disable-next-line:variable-name
    constructor(id_reservation: number, dateResa: string, dateDebut: string, dateFin: string,
                agenceDebut: string, agenceFin: string ) {
 this.id_reservation = id_reservation;
