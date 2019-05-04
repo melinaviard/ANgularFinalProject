@@ -58,6 +58,14 @@ import { ModifResaComponentComponent } from './modif-resa-component/modif-resa-c
       //   path: 'agences',
       //   component: Agences
       // },
+      { path: '/accueil',
+      component: Accueil // erreur car component accueil à creer
+    },
+
+    { path: '', // path vide va vers l'accueil
+      component: Accueil
+  }
+
     ])
     ],
   providers: [],

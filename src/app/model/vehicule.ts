@@ -1,5 +1,9 @@
 import { toBase64String } from '@angular/compiler/src/output/source_map';
 
+export interface VehiculesDispo {
+    Vehicules: Vehicule[];
+}
+
 export class Vehicule {
     // tslint:disable-next-line:variable-name
     public id_vehicule: number;
