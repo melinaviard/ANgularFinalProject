@@ -60,7 +60,7 @@ import { ModifResaComponentComponent } from './modif-resa-component/modif-resa-c
       // },
     ])
     ],
-  Providers: [],
+  providers: [],
   bootstrap: [AppComponent]
  })
 export class AppModule { }

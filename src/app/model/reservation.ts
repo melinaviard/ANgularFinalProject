@@ -23,7 +23,7 @@ public static createBlank(): Reservation {
     return new Reservation(-1, '', '', '', '', '');
 }
 
-public static reservtionFromJSON(obj: any): Reservation {
+public static reservationFromJSON(obj: any): Reservation {
     return new Reservation(obj.id, obj.dateResa, obj.dateDebut, obj.dateFin, obj.agenceDebut, obj.agenceFin);
 }
 }

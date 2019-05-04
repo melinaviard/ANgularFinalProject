@@ -17,14 +17,22 @@
         <div id="finmenu">
   
       <a (click)="goLogin()" style='cursor: pointer'>Mon compte</a></div>
-    </div>
-  
-    <img src="{{ recipe.cover_photo ? recipe.cover_photo : '/assets/emptybowl.jpg' }} " /> <!-- Image à changer par logo !-->
-  
-    <div id="bandeau">Location de citadines, familiales, SUV et utilitaires </div>
-  </div>
+      <div id="bandeau">
+          <div id="bandeau-text"> Location de citadines, familiales, SUV et utilitaires </div>
+      
+       <div class="logo"> <img  src="{{ '/assets/logo.jpg' }} " />
+       </div>
+      
+      </div> 
   
   <!-- Form pmour recherche vehicule-->
+  <div id="form-rechercheVehicule"> 
+      <div class="form-group">
+          <input class="form-control" [(ngModel)]="resa_in_progress.agenceDebut" type="text" placeholder="agence Depart"
+            name="title" />
+        </div>
+
+  </div>
   <!--Afficher vehicules correspondant à la recherche -->
   <app-recipe-summary *ngFor="let recipe of recipes" [recipe]="recipe" (userClick)="userClickedOnRecipe($event)"> </app-recipe-summary>
 
