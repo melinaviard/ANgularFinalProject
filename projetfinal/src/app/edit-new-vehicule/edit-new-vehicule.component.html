@@ -1,0 +1,41 @@
+
+<div class="newvehicule panel panel-default">
+  <div class="panel-heading">
+    <h4>Ajouter un vehicule</h4>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+      <input class="form-control" [(ngModel)]="new_vehicule.type" type="text" placeholder="Type"
+        name="type" />
+    </div>
+    <div class="form-group">
+      <textarea row="5" [(ngModel)]="new_vehicule.marque" class="form-control" placeholder="Marque"
+        name="marque"></textarea>
+    </div>
+    <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="new_vehicule.nombrePlaces"
+        placeholder="Nombre de place" name="nombrePlaces" />
+      <span class="input-group-addon">places</span>
+    </div>
+    <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="new_vehicule.consommation"
+        placeholder="Consommation" name="consommation" />
+      <span class="input-group-addon">L/100km</span>
+    </div>
+    <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="new_vehicule.emplacement"
+        placeholder="Emplacement" name="emplacement" />
+    </div>
+    <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="new_vehicule.disponibilite"
+        placeholder="Disponibilite" name="disponibilite" />
+    </div>
+    <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="new_vehicule.etatLieu"
+        placeholder="Etat des lieux" name="etatLieu" />
+    </div>
+
+    <div class="input-group">
+      <input type="button" value="Add Vehicule" (click)="addUpdateVehiculeClicked()" />
+    </div>
+  </div>

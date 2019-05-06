@@ -1,0 +1,22 @@
+<p><a (click)="goBackButtonPressed()" style='cursor: pointer'>Go Back</a>
+  <a (click)="editButtonPressed()" style='cursor: pointer'>Edit </a>
+  <a (click)="deleteButtonPressed()" style='cursor: pointer'>Delete</a></p>
+<div class='vehicule panel panel-default'>
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ vehicule.marque }}</h3>
+  </div>
+  
+<p>{{ vehicule.type }}</p>
+<div>
+  <div class=" data-title">Nombre de place :</div>
+  <div>{{ recipe.nombrePlaces }}</div>
+  <div class="data-title">Consommation (pour 100km) : </div>
+  <div>{{ recipe.consommation }}</div>
+  <div class="data-title">Emplacement physique : </div>
+  <div>{{ recipe.emplacement }}</div>
+  <div class="data-title">Disponibilité : </div>
+  <div>{{ recipe.disponibilite }}</div>
+  <div class="data-title">Commentaires de l'etat des lieux : </div>
+  <div>{{ recipe.etatLieu }}</div>
+</div>
+
