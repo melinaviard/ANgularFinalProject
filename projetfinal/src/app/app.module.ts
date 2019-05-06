@@ -63,7 +63,7 @@ import { WelcomeGestionnaireComponent } from './welcome-gestionnaire/welcome-ges
         component: EditNewVehiculeComponent
       },
       {
-        path: 'vehicule/ :id_vehicule',
+        path: 'vehicule/:id_vehicule',
         component: VehiculeDetailsComponent
       },
       {
@@ -74,6 +74,10 @@ import { WelcomeGestionnaireComponent } from './welcome-gestionnaire/welcome-ges
       {
         path: 'vehicule',
         component: VehiculeListComponent
+      },
+      {
+        path: 'editnewvehicule/:id_vehicule',
+        component: EditNewVehiculeComponent
       }
     ])
 

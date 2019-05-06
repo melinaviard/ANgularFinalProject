@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Vehicule } from '../model/vehicule';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
-import { VehciuleService } from '../serviceVehicule/vehciule-service';
 import { VehiculeServiceService } from '../vehicule-service.service';
 
 @Component({
@@ -23,23 +22,23 @@ vehicules: Vehicule[];
     });
   }
 
-  findVehiculeById(id: number): Vehicule {
-    for (const vehicule of this.vehicules) {
-      if ( vehicule.id_vehicule === id) {
-        return vehicule;
-      }
-    }
-    return null;
-  }
+  // findVehiculeById(id: number): Vehicule {
+  //   for (const vehicule of this.vehicules) {
+  //     if ( vehicule.id_vehicule === id) {
+  //       return vehicule;
+  //     }
+  //   }
+  //   return null;
+  // }
 
   goBackButtonPressed(): void {
     this.location.back();
   }
-public editButtonPressed(): void {
+  public editButtonPressed(): void {
   this.router.navigateByUrl('editnewvehicule/' + this.vehicule.id_vehicule);
-}
+  }
 
-public deleteButtonPressed(): void {
+  public deleteButtonPressed(): void {
   this.vehiculeService.deleteVehicule(this.vehicule).subscribe((response) => {
     this.router.navigateByUrl('/vehicule');
   });

@@ -36,7 +36,7 @@ public addVehiculeClicked() {
 addNewVehiculePressed(): void {
   this.router.navigateByUrl('/addVehicule');
 }
-userClikedOnVehicule(id_vehicule): void {
+userClickedOnVehicule(id_vehicule): void {
   this.router.navigateByUrl('/vehicule/' + id_vehicule);
 }
 

@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Vehicule } from './model/vehicule';
-
-const RECIPE_SERVER = 'http://localhost:8080';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class VehiculeServiceService {
+import { Vehicule } from '../model/vehicule';
 
 
-  httpOptions = {
+const RECIPE_SERVER = 'http://localhost:8080'; 
+
+@Injectable({providedIn: 'root'})
+
+export class VehciuleService {
+
+  httpOptions = { 
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
@@ -37,7 +36,7 @@ public updateVehicule(vehicule: Vehicule): Observable<any> {
   return this.http.put<Vehicule>(RECIPE_SERVER + '/vehicule/update', JSON.stringify(vehicule), this.httpOptions);
 }
 
-public getVehiculeByType(vehicule: Vehicule): Observable<any> {
+public getVehiculeByType(vehicule: Vehicule): Observable<any>{
     return this.http.get<Vehicule>(RECIPE_SERVER + '/findbytype/' + vehicule.type);
 }
 
@@ -49,5 +48,3 @@ public getVehiculeByMarque(vehicule: Vehicule): Observable<any> {
 
 }
 }
-
-

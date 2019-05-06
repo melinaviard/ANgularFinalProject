@@ -34,7 +34,11 @@
       <input type="text" class="form-control" [(ngModel)]="new_vehicule.etatLieu"
         placeholder="Etat des lieux" name="etatLieu" />
     </div>
-
+    <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="new_vehicule.prix"
+        placeholder="Prix à la journée" name="prix" />
+        <span class="input-group-addon">Prix à la journée</span>
+    </div>
     <div class="input-group">
       <input type="button" value="Add Vehicule" (click)="addUpdateVehiculeClicked()" />
     </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Vehicule } from '../model/vehicule';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { VehciuleService } from '../serviceVehicule/vehciule-service';
+import { VehiculeServiceService } from '../vehicule-service.service';
 
 @Component({
   selector: 'app-edit-new-vehicule',
@@ -12,8 +12,8 @@ export class EditNewVehiculeComponent implements OnInit {
 new_vehicule: Vehicule;
 mode_access: string;
 
-  constructor(private router: Router, private route: ActivatedRoute, private vehiculeService: VehciuleService) {
-    this.new_vehicule= Vehicule.createBlank();
+  constructor(private router: Router, private route: ActivatedRoute, private vehiculeService: VehiculeServiceService) {
+    this.new_vehicule = Vehicule.createBlank();
    }
 
   ngOnInit(): void {

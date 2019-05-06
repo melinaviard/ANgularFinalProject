@@ -26,7 +26,7 @@ export class Vehicule {
 
 
 public static createBlank(): Vehicule {
-    return new Vehicule (-1, '', '', -1, -1, '', true, '', -1);
+    return new Vehicule (-1, '', '', 0, 0, '', true, '', 0);
 }
 
 public static vehiculeFromJSON(obj: any): Vehicule {
