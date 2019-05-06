@@ -1,7 +1,7 @@
-import { VehciuleService } from '../serviceVehicule/vehciule-service';
 import { Vehicule } from '../model/vehicule';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { VehiculeServiceService } from '../vehicule-service.service';
 
 @Component({
   selector: 'app-vehicule-list',
@@ -15,7 +15,7 @@ export class VehiculeListComponent implements OnInit {
   vehicules: Vehicule[];
 
 
-  constructor(private router: Router, private vehciuleService: VehciuleService) { 
+  constructor(private router: Router, private vehciuleService: VehiculeServiceService) {
   this.new_vehicule = Vehicule.createBlank();
   this.getAllVehicules();
 }

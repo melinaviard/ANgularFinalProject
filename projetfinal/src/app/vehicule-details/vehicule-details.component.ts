@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Vehicule } from '../model/vehicule';
-import { VehciuleService } from '../serviceVehicule/vehciule-service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
+import { VehciuleService } from '../serviceVehicule/vehciule-service';
+import { VehiculeServiceService } from '../vehicule-service.service';
 
 @Component({
   selector: 'app-vehicule-details',
@@ -13,7 +14,7 @@ export class VehiculeDetailsComponent implements OnInit {
 vehicule: Vehicule;
 vehicules: Vehicule[];
 
-  constructor(private router: Router, private route: ActivatedRoute, private vehiculeService: VehciuleService,
+  constructor(private router: Router, private route: ActivatedRoute, private vehiculeService: VehiculeServiceService,
               private location: Location) { }
 
   ngOnInit(): void {
