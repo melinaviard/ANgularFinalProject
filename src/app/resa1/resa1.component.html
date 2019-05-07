@@ -1,152 +1,234 @@
 <div id="header">
-    <div id="menu">
-      <div id="submenu">
-       
+  <div id="menu">
+    <div id="submenu">
+
       <!-- Menu -->
       <div id="submenu">
         <a (click)="goAccueil()" style='cursor: pointer'>Accueil</a></div>
       <div id="submenu">
-     <a (click)="goResa()"  style='cursor: pointer'>Louer un véhicule</a></div>
+        <a (click)="goResa()" style='cursor: pointer'>Louer un véhicule</a></div>
       <div id="submenu">
         <a (click)="goContact()" style='cursor: pointer'>Contact</a></div>
       <div id="submenu">
         <a (click)="goQuisommesnous()" style='cursor: pointer'>Qui sommes-nous ?</a></div>
-    
+
       <div id="finmenu">
         <a (click)="goUpdateResa()" style='cursor: pointer'>Voir ou modifier une réservation</a></div>
-        <div id="finmenu">
-  
-      <a (click)="goLogin()" style='cursor: pointer'>Mon compte</a></div>
+      <div id="finmenu">
+
+        <a (click)="goLogin()" style='cursor: pointer'>Mon compte</a></div>
       <div id="bandeau">
-          <div id="bandeau-text"> Location de citadines, familiales, SUV et utilitaires </div>
-      
-       <div class="logo"> <img  src="{{ '/assets/logo.jpg' }} " />
-       </div>
-      
-      </div> 
+        <div id="bandeau-text"> Location de citadines, familiales, SUV et utilitaires </div>
+
+        <div id='logo'> <img src="/assets/logo.jpg" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div> <!-- Fin menu-->
+
+
+<!-- Form pour recherche vehicule-->
+<div id="form">
+  <div id="form-rechercheVehicule">
+
+    <div class="form-group">
+
+
+      Menu deroulant pour agence debut-->
+      <!-- Pour tous, cela aurait été mieux de faire avec "*ngFor" (si jamais ajout d'une agence par ex, se met tout seul ici",, mais je n'ai pas réussi ... -->
+      <div class="form-agenceDebut">
+        <div id="Titre"> Agence de départ : </div>
+        <select class="form-control" name="agenceDebut" required [(ngModel)]="resa_in_progress.agenceDebut" (change)="callType(resa_in_progress.agenceDebut.value)">
+          <option [value]="agenceDebut" value="Lyon">Lyon</option>
+          <option [value]="agenceDebut" value="Brest">Brest</option>
+          <option [value]="agenceDebut" value="Paris">Paris</option>
+          <option [value]="agenceDebut" value="Marseille">Marseille</option>
+          <option [value]="agenceDebut" value="Strasbourg">Strasbourg</option>
+          <option [value]="agenceDebut" value="Montpellier">Montpellier</option>
+          <option [value]="agenceDebut" value="Lille">Lille</option>
+          <option [value]="agenceDebut" value="Bourges">Bourges</option>
+          <option [value]="agenceDebut" value="Clermont">Clermont</option>
+          <option [value]="agenceDebut" value="Tulle">Tulle</option>
+
+        </select>
+        <div id="agenceDebut-button"> <input type="button" value="Choisir cette agence" (click)="addAgenceDebut()" /> </div>
+        <!-- Message d'erreur si manque agence de début-->
+        <!-- <div *ngIf="agenceDebut.invalid">
+          <!-- Faire methode invalid ds ts
+           Veuillez sélectionner une agence de départ.
+        </div> -->
+      </div> <!-- fin agenceDepart -->
+
+
+
+
+      <!-- Menu deroulant pour agence fin -->
+      <div class="form-agenceFin">
+          <div id="Titre"> Agence de départ : </div>
+          <select class="form-control" name="agenceFin" required [(ngModel)]="resa_in_progress.agenceFin" (change)="callType(resa_in_progress.agenceFin.value)">
+            <option [value]="agenceFin" value="Lyon">Lyon</option>
+            <option [value]="agenceFin" value="Brest">Brest</option>
+            <option [value]="agenceFin" value="Paris">Paris</option>
+            <option [value]="agenceFin" value="Marseille">Marseille</option>
+            <option [value]="agenceFin" value="Strasbourg">Strasbourg</option>
+            <option [value]="agenceFin" value="Montpellier">Montpellier</option>
+            <option [value]="agenceFin" value="Lille">Lille</option>
+            <option [value]="agenceFin" value="Bourges">Bourges</option>
+            <option [value]="agenceFin" value="Clermont">Clermont</option>
+            <option [value]="agenceFin" value="Tulle">Tulle</option>
   
+          </select>
+                  <div id="agenceFin-button"> <input type="button" value="Choisir cette agence" (click)="addAgenceFin()" /> </div>
 
+          </div> <!-- fin agenceRetour -->
 
-  <!-- Form pour recherche vehicule-->
-  <div id="form-rechercheVehicule"> 
+      <!-- Message d'erreur si manque agence de retour-->
+      <!-- <div *ngIf="agenceFin.invalid">
+        Veuillez sélectionner une agence de retour.
+      </div> -->
+<!-- 
+      Input calendar for dateDebut -->
+      <div class="mbsc-col-sm-12 mbsc-col-md-4">
+        <label>
+          <div id="Titre"> Date d'emprunt </div>
+          <input name="dateDebut" [(ngModel)]="resa_in_progress.dateDebut" mobiscroll-calendar="mobileSettings" data-input-style="box"
+            required data-label-style="stacked" />
+        </label>
+        <div id="dateDebut-button"> <input type="button" value="Choisir cette date" (click)="addDateDebut()" /> </div>
 
-      <div class="form-group">
-        
+      </div>
 
-         <!-- Menu deroulant pour agence debut-->
-         <div class="dropdown">
-            <button class="resa_in_progress.agenceDebut" type="button" id="resa_in_progress.agenceDebut" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-Agence d'emprunt :            <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="resa_in_progress.agenceDebut">
-            <li><a href="#" title="agence1">Lyon</a></li>
-            <li><a href="#" title="agence2">Brest</a></li>
-            <li><a href="#" title="agence3">Paris</a></li>
-            <li><a href="#" title="agence4">Marseille</a></li>
-            <li><a href="#" title="agence5">Strasbourg</a></li>
-            <li><a href="#" title="agence6">Montpellier</a></li>
-            <li><a href="#" title="agence7">Lille</a></li>
-            <li><a href="#" title="agence8">Bourges</a></li>
-            <li><a href="#" title="agence9">Clermont</a></li>
-            <li><a href="#" title="agence10">Tulle</a></li>   
-            </ul>
-            </div>
+      <!-- Message d'erreur si manque date de début-->
+      <!-- <div *ngIf="dateDebut.invalid">
+        Veuillez sélectionner une date de départ.
+      </div> -->
 
-       <!-- Menu deroulant pour agence fin-->
-       <div class="dropdown">
-          <button class="resa_in_progress.agenceDebut" type="button" id="resa_in_progress.agenceFin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-Agence de retour :        <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="resa_in_progress.agenceFin">
-          <li><a href="#" title="agence1">Lyon</a></li>
-          <li><a href="#" title="agence2">Brest</a></li>
-          <li><a href="#" title="agence3">Paris</a></li>
-          <li><a href="#" title="agence4">Marseille</a></li>
-          <li><a href="#" title="agence5">Strasbourg</a></li>
-          <li><a href="#" title="agence6">Montpellier</a></li>
-          <li><a href="#" title="agence7">Lille</a></li>
-          <li><a href="#" title="agence8">Bourges</a></li>
-          <li><a href="#" title="agence9">Clermont</a></li>
-          <li><a href="#" title="agence10">Tulle</a></li>   
-          </ul>
-          </div>
+      <!-- Input calendar for dateFin-->
+      <div class="mbsc-col-sm-12 mbsc-col-md-4">
+        <label>
+          <div id="Titre"> Date de retour </div>
+          <input name="dateFin" [(ngModel)]="resa_in_progress.dateFin" mobiscroll-calendar="mobileSettings" data-input-style="box" required
+            data-label-style="stacked" />
+        </label>
+        <div id="dateFin-button"> <input type="button" value="Choisir cette date" (click)="addDateFin()" /> </div>
 
+      </div>
 
-<!-- Input calendar for dateDebut-->
-<div class="mbsc-col-sm-12 mbsc-col-md-4">
-    <label>
-        Mobile
-        <input ng-model="dateDebut" mobiscroll-calendar="mobileSettings" data-input-style="box" data-label-style="stacked" />
-    </label>
-</div>
+      <!-- Message d'erreur si manque date de fin-->
+      <!-- <div *ngIf="dateFin.invalid">
+        Veuillez sélectionner une date de retour.
+      </div> -->
 
-        <!-- Input calendar for dateFin-->
-<div class="mbsc-col-sm-12 mbsc-col-md-4">
-    <label>
-        Mobile
-        <input ng-model="dateFin" mobiscroll-calendar="mobileSettings" data-input-style="box" data-label-style="stacked" />
-    </label>
-</div>
-<!-- Checkbox Type vehciule -->
+      <!-- Checkbox Type vehciule -->
       <label>Type du véhicule : </label>
       <div class="checkbox-type">
-          <label class="checbkox"> 
-                <input type="checkbox" name="type" ngModel="vehicule_recherche.type.citadine"> Renault
-              </label><br/>
-              <label class="checkbox" > 
-                  <input type="checkbox" name="marque" ngModel="vehicule_recherche.marque.familiale"> Peugeot
-      
-               </label><br/>
-               <label class="checbkox"> 
-                  <input type="checkbox" name="type" ngModel="vehicule_recherche.type.SUV"> Renault
-                </label><br/>
-                <label class="checbkox"> 
-                    <input type="checkbox" name="type" ngModel="vehicule_recherche.type.utilitaire"> Renault
-                  </label><br/>
-              <tt>value1 = {{checkboxModel.citadine}}</tt><br/>
-              <tt>value2 = {{checkboxModel.familiale}}</tt><br/>
-              <tt>value1 = {{checkboxModel.SUV}}</tt><br/>
-              <tt>value1 = {{checkboxModel.utilitaire}}</tt><br/>
-    
-              <!-- Checbox nombrePlaces -->
-              <label>Type du véhicule : </label>
-              <div class="checkbox-type">
-                  <label class="checbkox"> 
-                        <input type="checkbox" name="type" ngModel="vehicule_recherche.nombrePlaces.3"> 3
-                      </label><br/>
-                      <label class="checkbox" > 
-                          <input type="checkbox" name="marque" ngModel="vehicule_recherche.nombrePlaces.4"> 4
-              
-                       </label><br/>
-                       <label class="checbkox"> 
-                          <input type="checkbox" name="type" ngModel="vehicule_recherche.nombrePlaces.5"> 5
-                        </label><br/>
-                        <label class="checbkox"> 
-                            <input type="checkbox" name="type" ngModel="vehicule_recherche.nombrePlaces.7"> 7
-                          </label><br/>
-                      <tt>value1 = {{checkboxModel.3}}</tt><br/>
-                      <tt>value2 = {{checkboxModel.4}}</tt><br/>
-                      <tt>value1 = {{checkboxModel.5}}</tt><br/>
-                      <tt>value1 = {{checkboxModel.7}}</tt><br/>
+        <label class="checbkox">
+          <input type="checkbox" name="type"  [(ngModel)]="resa_in_progress.vehicule.type" value="citadine"> Citadine
+        </label><br />
+        <label class="checkbox">
+          <input type="checkbox" name="type" [(ngModel)]="resa_in_progress.vehicule.type" value="familiale"> Familiale
+
+        </label><br />
+        <label class="checbkox">
+          <input type="checkbox" name="type" [(ngModel)]="resa_in_progress.vehicule.type" value="suv"> SUV
+        </label><br />
+        <label class="checbkox">
+       
+            <input type="checkbox" name="type" [(ngModel)]="resa_in_progress.vehicule.type" value="utilitaire"> Utilitaire
+          </label><br />
+        <div id="type-button"> <input type="button" value="Choisir ce type de véhicule" (click)="addType()" /> </div>
+
+</div>
+
+        <!-- Checbox nombrePlaces -->
+        <div id="Titre"> Nombre de places : </div>
+        <div class="checkbox-type" [(ngModel)]="resa_in_progress.vehicule.nombrePlaces" value="vehicule.nombrePlaces.value">
+          <input type="checkbox" name="nombrePlaces" [(ngModel)]="resa_in_progress.vehicule.nombrePlaces" value="3"> 3
+          <input type="checkbox" name="nombrePlaces" [(ngModel)]="resa_in_progress.vehicule.nombrePlaces" value="4"> 4
+          <input type="checkbox" name="nombrePlaces"[(ngModel)]="resa_in_progress.vehicule.nombrePlaces" value="5"> 5
+          <input type="checkbox" name="nombrePlaces" [(ngModel)]="resa_in_progress.vehicule.nombrePlaces" value="7"> 7
+        </div>
+
+        <!-- Checkbox marque     -->
+        <div id="Titre">Marque du véhicule : </div>
+        <div class="checkbox-marque">
+          <label class="checbkox" (change)="callType(resa_in_progress.vehicule.marque.value)">
+            <input type="checkbox" name="marque" [(ngModel)]="resa_in_progress.vehicule.marque" value="renault"> Renault
+          </label><br />
+          <label class="checkbox">
+            <input type="checkbox" name="marque" [(ngModel)]="resa_in_progress.vehicule.marque" value="peugeot"> Peugeot
+
+          </label><br />
+</div>
 
 
-<!-- Checkbox marque     -->
-<label>Marque du véhicule : </label>
-<div class="checkbox-marque">
-    <label class="checbkox"> 
-          <input type="checkbox" name="marque" ngModel="vehicule_recherche.marque.Renault"> Renault
-        </label><br/>
-        <label class="checkbox" > 
-            <input type="checkbox" name="marque" ngModel="vehicule_recherche.marque.Peugeot"> Peugeot
+          <!-- Afficher vehicules correspondant à la recherche -->
+         <div id="afficher_vehicules">
+            <li ng-repeat="Vehicules | filtre1 : emplacement : {'$':agenceDebut} |
+                  filtre2 : disponibilite : {'$':dateDebut} | filtre3 :disponibilite : {'$':dateFin}
+                  filtre4: type : {'$':vehicule_recherche.type} |
+                  filtre5 : nombrePlaces : {'$':vehicule_recherche.nombrePlaces}
+                  filtre6 : marque : {'$':vehicule_recherche.marque}">Voici les véhicules disponibles : {{Vehicules}}
+              <div id="ok-button"> <input type="button" value="ChoisirVehicule" (click)="goResa2()" /> </div>
+            </li> 
+            
+            <!-- Pour dates essayer de faire disponibilite = toutes les dates (de debut jusqu'a fin ... )-->
+         
+          -->
+         
+          </div> <!-- fin div afficher vehicules-->
 
-         </label><br/>
-        <tt>value1 = {{checkboxModel.Renault}}</tt><br/>
-        <tt>value2 = {{checkboxModel.Peugeot}}</tt><br/>
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</div>
 
- 
-<!-- 
-Afficher vehicules correspondant à la recherche 
-  <app-recipe-summary *ngFor="let vehicule of vehicules" [vehicule]="vehicule" (userClick)="userClickedOnRecipe($event)"> </app-recipe-summary>
- -->
 
-  <!-- Mettre footer = cc depuis resa 2 une fois arrivé à afficher images-->
+
+
+
+<div id="divFooter0">
+
+  <div class='imgFooter0' (click)="goAgences()">
+    <img src='/assets/position.bmp'>
+  </div>
+  <div id="p0">Trouver une agence </div>
+  <div id="p1"> Parmi nos 10 agences en France </div>
+</div>
+
+<div id="divFooter0" (click)="goQuisommesnous()">
+  <div class='imgFooter1'>
+    <a (click)="goInfos()"><img src='/assets/twingo.jpg' />
+    </a>
+  </div>
+  <div id="p0">Découvrez Tant qu'ça roule</div>
+  <div id="p1"> Loueurs de très bons véhicules </div>
+</div>
+
+<div id="divFooter0" (click)="goContact()">
+  <div class='imgFooter1'>
+    <a (click)="goContact()">
+      <img src='/assets/kadjar.jpg' />
+    </a>
+
+  </div>
+  <div id="p0">N'hésitez pas à nous contacter </div>
+  <div id="p1"> pour tout renseignement complémentaire </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="ligne"> </div>
+<div id="footerfinal0"> Tant qu'ça roule Société</div>
+<div id="footerfinal1"> Tant qu'ça roule Société</div>
+<div id="footerfinal1"> Tant qu'ça roule Société</div>
+<div id="footerfinal1"> Tant qu'ça roule Société</div>

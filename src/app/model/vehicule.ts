@@ -16,6 +16,7 @@ export class Vehicule {
     public etatLieu: string;
     public photo: string;
 
+   
     // tslint:disable-next-line:variable-name
     constructor(id_vehicule: number, type: string, marque: string, nombrePlaces: number,
                 consommation: number, emplacement: string, disponibilite: string,

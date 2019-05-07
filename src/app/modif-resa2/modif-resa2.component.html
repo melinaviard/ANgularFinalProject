@@ -1,0 +1,111 @@
+<div id="header">
+    <div id="menu">
+       
+      <!-- Menu -->
+          <div id="submenu">
+              <a (click)="goAccueil()" style='cursor: pointer'>Accueil</a>
+          </div>
+          <div id="submenu">
+              <a (click)="goResa()"  style='cursor: pointer'>Louer un véhicule</a>
+          </div>
+          <div id="submenu">
+               <a (click)="goContact()" style='cursor: pointer'>Contact</a>
+          </div>
+          <div id="submenu">
+                <a (click)="goQuisommesnous()" style='cursor: pointer'>Qui sommes-nous ?</a>
+          </div>
+    
+          <div id="finmenu">
+              <a (click)="goUpdateResa()" style='cursor: pointer'>Voir ou modifier une réservation</a>
+          </div>
+  
+          <div id="finmenu">
+              <a (click)="goLogin()" style='cursor: pointer'>Mon compte</a>
+          </div>
+    </div> <!-- fin menu-->
+    <div id="bandeau">
+      <div id="bandeau-text"> Location de citadines, familiales, SUV et utilitaires </div>
+  
+ <div id='logo'> <img  src="/assets/logo.jpg" />
+ </div>
+  
+  </div> 
+  </div> <!--Fin header-->
+
+  
+<div id="corps">
+<div id="header0">
+<div id="header1"> Réservation n° {{ reservation.id_reservation }} </div>
+
+<div id="header2">Effectuée le {{ reservation.dateResa }} 
+</div> </div> <!-- Fin header 0--> 
+  
+    <div id="corps0"> 
+        <div id="photo">  <img  src= "/assets/{{ reservation.vehicule.marque}}.jpg" /> </div>
+        <div id="marque"> {{ reservation.vehicule.marque}}  </div>
+   
+        <div class="form-group">
+         Du   <input class="form-control" [(ngModel)]="reservation.dateDebut" type="text" placeholder="reservation.dateDebut"
+              name="title" />
+          </div>
+          <div id="agences"> à notre agence de {{ reservation.agenceDebut }} </div>
+
+          <div class="form-group">
+              Au   <input class="form-control" [(ngModel)]="reservation.dateFin" type="text" placeholder="reservation.dateFin"
+                   name="title" />
+               </div>
+       
+ <div id="agences"> à notre agence de {{ reservation.agenceFin }} </div>
+
+
+ <div id="ok-button"> 
+    <div id="ok"> <input type="button" value="Modifier" (click)="updateReservation()" /> </div>
+    <div id="ok"> <input type="button" value="Supprimer" (click)="deleteReservation()" /> </div>
+    <input type="button" value="Retour" (click)="goBack()" />
+</div>
+
+
+</div> <!-- Fin corps-->
+
+
+
+<div id="divFooter0">
+
+    <div class='imgFooter0' (click)="goAgences()">
+      <img src='/assets/position.bmp'>
+    </div>
+    <div id="p0">Trouver une agence </div>
+    <div id="p1"> Parmi nos 10 agences en France </div>
+  </div>
+  
+  <div id="divFooter0" (click)="goQuisommesnous()">
+    <div class='imgFooter1'>
+      <a (click)="goInfos()"><img src='/assets/twingo.jpg' />
+      </a>
+    </div>
+    <div id="p0">Découvrez Tant qu'ça roule</div>
+    <div id="p1"> Loueurs de très bons véhicules </div>
+  </div>
+  
+  <div id="divFooter0" (click)="goContact()">
+    <div class='imgFooter1'>
+      <a (click)="goContact()">
+        <img src='/assets/enveloppe.jpg' />
+      </a>
+    </div>
+    <div id="p0">N'hésitez pas à nous contacter </div>
+    <div id="p1"> pour tout renseignement complémentaire </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div id="ligne"> </div>
+  <div id="footerfinal0"> Tant qu'ça roule Société</div>
+  <div id="footerfinal1"> Tant qu'ça roule Société</div>
+  <div id="footerfinal1"> Tant qu'ça roule Société</div>
+  <div id="footerfinal1"> Tant qu'ça roule Société</div>

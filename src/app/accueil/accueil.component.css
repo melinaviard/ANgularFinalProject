@@ -10,23 +10,12 @@ div.imgFooter0 img {
     margin: 5px
 }
 
-div#form {
-    border: 2px solid rgb(63, 61, 61);
-}
-
 div#footer0  {
     margin-left: 205px;
     text-align : center;
 }
 
-div#divFooter0  {
-width: 320px;
-    border: 2px solid rgb(63, 61, 61);
-    float: left;
-    margin: 70px;
-    height: 210px;
 
-}
 
 div#menu {
     background-color: rgb(63, 61, 61);
@@ -41,7 +30,11 @@ div#submenu {
    font-size: 18px;
    margin-right:30px;
 }
-
+div#image img{
+    height: 600px;
+    width: 700px;
+    margin-top: 5px;
+}
 div#bandeau{
     color: rgb(88, 85, 85);
 font-size: 20px;
@@ -49,13 +42,13 @@ text-align: center;
 font-family:  Verdana, Geneva, Tahoma, sans-serif
 }
 
-
 div#finmenu {
     color: yellow;
     font-size: 11px;
 text-align: right;
 margin-right: 70px;
 }
+
 
 div#ligne {
     background-color: rgb(63, 61, 61);
@@ -82,12 +75,11 @@ div.imgFooter1 img {
 div#divFooter0  {
 width: 180px;
     border: 2px solid rgb(63, 61, 61);
-    float: left;
-    margin: 50px;
     height: 180px;
-    margin-top: 95px;
+    margin-top:30px;
     text-align : center;
-
+    margin-left: 250px;
+float: left;
 
 }
 
@@ -107,20 +99,6 @@ font-size: 10px;
 }
 
 
-div.div0img img {
-    width: 180px;
-        float: left;
-        height: 170px;
-        margin-left: 30px;
-        margin-top: 40px;
-    
-    }
-    
-div#form-login input{
-    margin-left: 15px;
-}
-
-
 
 div.data-title {
     float: left;
@@ -137,6 +115,7 @@ div#header-div {
     padding: 10px;
 
 }
+
 div#header {
     border: 2px solid rgb(63, 61, 61);
  height: 190px;
@@ -161,92 +140,50 @@ div#div0 {
 }
 
 
+
+
 div#p0 {
     font-size: 15px;
     font-weight: bold;
+    text-align: center;
 
 }
-
-div#p1 {
-    font-size: 15px;
-}
-
-div#p2 {
-    font-size: 15px;
-}
-
-div#p3 {
-    font-size: 12px;
-}
-
-div#p4 {
-    font-size: 15px;
-    margin-bottom: 7px;
-    margin-top: 18px;
-}
-
-div#instructions {
-    float: left;
-    max-width: 400px;
-    margin: 20px 0;
-    padding: 5px 10px;
-}
-
-div#type-vehicule {
-    font-weight: bold;
-}
-
-div#form {
-    margin-left: 150px;
-text-align: left;
-}
-div#form-identite {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-size: 13px;
-}
-
-div#form-anneePermis{
-    margin-bottom: 5px;
-
-    font-size: 13px;
-
-}
-
-div#form-coordonnees{
-    margin-bottom: 5px;
-   
-    font-size: 13px;
-
-}
-
-div#form-adresse{
-    margin-bottom: 5px;
-   
-    font-size: 13px;
-}
-
-
 div#ok-button {
-    margin-top: 15px;
-
-    margin-left: 350px;
-    float: left;
-    margin-right: 70px;
+    margin-top: 4px;
+    margin-left: 160px;
 }
 
-div#goback-button {
-    margin-top: 15px;
-    float: left;
+
+
+div#trouver {
+    border: 2px solid rgb(63, 61, 61);
+margin-left: 25%;
+margin-right: 25%;
+height: 150px;
+width: 400px;
+margin-top: -200px;
+background-color: white;
+position: absolute;
+
+}
+
+div#corps{
+position: relative;
+margin-left: 450px;
 }
 
 div#dates {
     font-size: 12px;
+float: right;
+margin-right: 30px;
+margin-top: -90px;
 }
 
-div#agence {
+div#agences {
     font-size: 12px;
-    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+
 }
 
 @media (min-width: 150px) {
@@ -256,5 +193,12 @@ div#agence {
 
     div#instructions, div#ingredients {
         min-height: 500px;
+    }
+
+    div#form-agence {
+        margin-top: 10px;
+    }
+    div#form-date {
+        margin-top: 5px;
     }
 }

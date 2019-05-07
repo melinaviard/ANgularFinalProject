@@ -5,10 +5,17 @@ div.logo img {
   }
 
 div.imgFooter0 img {
+    width: 50px;
+    height: 80px;
+    margin: 5px
+}
+
+div.imgFooter1 img {
     width: 100px;
     height: 100px;
     margin: 5px
 }
+
 
 
 
@@ -67,8 +74,19 @@ div#ligne {
     margin-top: 15%;
 }
 
-div#footerfinal {
+div#footerfinal0 {
     width: 100%;
+margin-top:0px; 
+margin-left: 5px;  
+float: left;
+}
+
+div#footerfinal1 {
+    width: 100%;
+margin-top:0px; 
+margin-left: 5px;  
+float: left;
+font-size: 10px;
 }
 
 
@@ -103,8 +121,14 @@ div#header-div {
 
 div#header {
     border: 2px solid rgb(63, 61, 61);
- height: 170px;
+ height: 190px;
 
+}
+div#logo img {
+    width: 110px;
+    height: 110px;
+float: left;
+margin-top: 0 px
 }
 div#div0 {
     border: 2px solid rgb(63, 61, 61);

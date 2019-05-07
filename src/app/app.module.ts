@@ -10,6 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ProvidersFeature } from '@angular/core/src/render3';
 import { ModifResaComponentComponent } from './modif-resa-component/modif-resa-component.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { ModifierResaComponent } from './modifier-resa/modifier-resa.component';
+import { HttpModule } from '@angular/http';
+import { ModifResa2Component } from './modif-resa2/modif-resa2.component';
+
 
 @NgModule({
   declarations: [
@@ -17,11 +22,16 @@ import { ModifResaComponentComponent } from './modif-resa-component/modif-resa-c
     Resa2Component,
     Resa1Component,
     ModifResaComponentComponent,
+    AccueilComponent,
+    ModifierResaComponent,
+    ModifResa2Component,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpModule,
     HttpClientModule,
     RouterModule.forRoot([
       // Paths resa
@@ -30,7 +40,13 @@ import { ModifResaComponentComponent } from './modif-resa-component/modif-resa-c
         // ici pas d'id, ce qui veut dire qu'on a cliqué sur ajout
         component: Resa2Component
       },
-      {
+      
+      // 2 eme path modifresa
+     { path: 'reservation/:reservation_id',
+      component: ModifierResaComponent
+          },
+
+          {
         path: 'louerVehicule',
         component: Resa1Component
       },
@@ -42,7 +58,7 @@ import { ModifResaComponentComponent } from './modif-resa-component/modif-resa-c
       //   path: 'infos',
       //   component: QuiSommesNous
       // },
-      {
+      { // 1er path modif ressa
         path: 'modifResa',
         component: ModifResaComponentComponent
       },
@@ -58,18 +74,21 @@ import { ModifResaComponentComponent } from './modif-resa-component/modif-resa-c
       //   path: 'agences',
       //   component: Agences
       // },
-      { path: '/accueil',
-      component: Accueil // erreur car component accueil à creer
+      { path: 'accueil',
+      component: AccueilComponent
     },
 
     { path: '', // path vide va vers l'accueil
-      component: Accueil
-  }
-
+      component: AccueilComponent
+  },
+  // 3eme path modif resa
+{ path: 'reservation/update/:reservation_id',
+component: ModifResa2Component}
     ])
     ],
   providers: [],
   bootstrap: [AppComponent]
  })
 export class AppModule { }
+
 
