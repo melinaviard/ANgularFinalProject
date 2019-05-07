@@ -137,6 +137,12 @@ div.cover-photo-holder img {
     padding: 10px;
  
  }
+ div#formulaire {
+    text-align: center; 
+    border: solid 2px #000000;
+     width: 40%;
+     margin: 0 auto;
+ }
  div#header {
     border: 2px solid rgb(63, 61, 61);
  height: 190px;
@@ -149,7 +155,7 @@ div.cover-photo-holder img {
  margin-top: 0 px
  }
  div#div0 {
-    border: 2px solid rgb(63, 61, 61);
+    border: 2px solid rgb(2, 1, 1);
     /* background-color: rgb(175, 171, 170); */
     /* float: left; */
     /* max-width: 250px; */
@@ -257,4 +263,11 @@ div.cover-photo-holder img {
     div#instructions, div#ingredients {
         min-height: 500px;
     }
+    div#label
+{
+	display: block;
+	width: 150px;
+	float: left;
+}
+
  }

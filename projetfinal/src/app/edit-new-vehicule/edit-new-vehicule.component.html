@@ -1,45 +1,54 @@
+<app-top-page></app-top-page>
 
 <div class="newvehicule panel panel-default">
   <div class="panel-heading">
     <h4>Ajouter un vehicule</h4>
   </div>
-  <div class="panel-body">
-    <div class="form-group">
-      <input class="form-control" [(ngModel)]="new_vehicule.type" type="text" placeholder="Type"
-        name="type" />
+  
+    <div class="panel-body">
+        <div id="formulaire">
+            <div class="input-group">
+          <span class="input-group-addon">Type : </span>
+        <input class="form-control" [(ngModel)]="new_vehicule.type" type="text" placeholder="Type" name="type" />
+      </div><br><br>
+        <div class="input-group">
+          <span class="input-group-addon"><h5>Marque</h5></span>
+        <textarea row="5" [(ngModel)]="new_vehicule.marque" class="form-control" placeholder="Marque"
+          name="marque"></textarea>
+      </div><br><br>
+      <div class="input-group">
+          <span class="input-group-addon"><h5>Places</h5></span>
+        <input type="text" class="form-control" [(ngModel)]="new_vehicule.nombrePlaces" placeholder="Nombre de place"
+          name="nombrePlaces" />
+      </div><br><br>
+      <div class="input-group">
+          <span class="input-group-addon"><h5>Consommation (L/100Km)</h5></span>
+        <input type="text" class="form-control" [(ngModel)]="new_vehicule.consommation" placeholder="Consommation"
+          name="consommation" />
+      </div><br><br>
+      <div class="input-group">
+          <span class="input-group-addon"> <h5>Emplacement </h5> </span>
+        <input type="text" class="form-control" [(ngModel)]="new_vehicule.emplacement" placeholder="Emplacement"
+          name="emplacement" />
+      </div><br><br>
+      <div class="input-group">
+          <span class="input-group-addon"> <h5>Disponibilite </h5> </span>
+        <input type="text" class="form-control" [(ngModel)]="new_vehicule.disponibilite" placeholder="Disponibilite"
+          name="disponibilite" />
+      </div><br><br>
+      <div class="input-group">
+          <span class="input-group-addon"> <h5>Etat des lieux</h5></span>
+        <input type="text" class="form-control" [(ngModel)]="new_vehicule.etatLieu" placeholder="Etat des lieux"
+          name="etatLieu" />
+      </div><br><br>
+      <div class="input-group">
+          <span class="input-group-addon"> <h5>Prix</h5> </span>
+        <input type="text" class="form-control" [(ngModel)]="new_vehicule.prix" placeholder="Prix à la journée"
+          name="prix" />
+      </div><br><br>
+        </div>
+
+      <div >
+        <input type="button" value="Add Vehicule" (click)="addUpdateVehiculeClicked()" />
+      </div>
     </div>
-    <div class="form-group">
-      <textarea row="5" [(ngModel)]="new_vehicule.marque" class="form-control" placeholder="Marque"
-        name="marque"></textarea>
-    </div>
-    <div class="input-group">
-      <input type="text" class="form-control" [(ngModel)]="new_vehicule.nombrePlaces"
-        placeholder="Nombre de place" name="nombrePlaces" />
-      <span class="input-group-addon">places</span>
-    </div>
-    <div class="input-group">
-      <input type="text" class="form-control" [(ngModel)]="new_vehicule.consommation"
-        placeholder="Consommation" name="consommation" />
-      <span class="input-group-addon">L/100km</span>
-    </div>
-    <div class="input-group">
-      <input type="text" class="form-control" [(ngModel)]="new_vehicule.emplacement"
-        placeholder="Emplacement" name="emplacement" />
-    </div>
-    <div class="input-group">
-      <input type="text" class="form-control" [(ngModel)]="new_vehicule.disponibilite"
-        placeholder="Disponibilite" name="disponibilite" />
-    </div>
-    <div class="input-group">
-      <input type="text" class="form-control" [(ngModel)]="new_vehicule.etatLieu"
-        placeholder="Etat des lieux" name="etatLieu" />
-    </div>
-    <div class="input-group">
-      <input type="text" class="form-control" [(ngModel)]="new_vehicule.prix"
-        placeholder="Prix à la journée" name="prix" />
-        <span class="input-group-addon">Prix à la journée</span>
-    </div>
-    <div class="input-group">
-      <input type="button" value="Add Vehicule" (click)="addUpdateVehiculeClicked()" />
-    </div>
-  </div>

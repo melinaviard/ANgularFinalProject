@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { Resa2Component } from './resa2/resa2.component';
 import { Resa1Component } from './resa1/resa1.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,8 +12,12 @@ import { VehiculeSummaryComponent } from './vehicule-summary/vehicule-summary.co
 import { VehiculeDetailsComponent } from './vehicule-details/vehicule-details.component';
 import { EditNewVehiculeComponent } from './edit-new-vehicule/edit-new-vehicule.component';
 import { RouterModule } from '@angular/router';
-import { ModifResaComponentComponent } from './modif-resa/modif-resa-component.component';
 import { WelcomeGestionnaireComponent } from './welcome-gestionnaire/welcome-gestionnaire.component';
+import {ButtonModule} from 'primeng/button';
+import {CarouselModule} from 'primeng/carousel';
+import { TopPageComponent } from './top-page/top-page.component';
+import {PanelModule} from 'primeng/panel';
+
 
 @NgModule({
   declarations: [
@@ -24,13 +28,18 @@ import { WelcomeGestionnaireComponent } from './welcome-gestionnaire/welcome-ges
     VehiculeSummaryComponent,
     VehiculeDetailsComponent,
     EditNewVehiculeComponent,
-    WelcomeGestionnaireComponent
+    WelcomeGestionnaireComponent,
+    TopPageComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    CarouselModule,
+    ButtonModule,
     HttpClientModule,
+    PanelModule,
     RouterModule.forRoot([
       // Paths resa
       {
@@ -68,8 +77,12 @@ import { WelcomeGestionnaireComponent } from './welcome-gestionnaire/welcome-ges
       },
       {
         path: '',
-        redirectTo: '/vehicule',
+        redirectTo: '/welcomegestionnaire',
         pathMatch: 'full'
+      },
+      {
+        path: 'welcomegestionnaire',
+        component: WelcomeGestionnaireComponent
       },
       {
         path: 'vehicule',

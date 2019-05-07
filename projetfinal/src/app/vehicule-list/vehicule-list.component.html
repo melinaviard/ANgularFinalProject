@@ -1,8 +1,16 @@
-<div style="float: right; padding: 5px"><input type="button" value="Add New Vehicule"
-  (click)="addNewVehiculePressed()"/></div>
+<app-top-page></app-top-page>
+<br>
+<br>
+
+
+
+<div style="float: right; padding: 5px" >
+
+  <p-button type="button" label="Ajouter un véhicule" (click)="addNewVehiculePressed()" ></p-button></div>
   
-  <h1>Voici nos véhicules</h1>
-  
-  <app-vehicule-summary *ngFor="let vehicule of vehicules" [vehicule]="vehicule" (userClick)="userClickedOnVehicule($event)">
-  
-  </app-vehicule-summary>
+  <h1>Nos véhicules</h1>
+  <div id="div0">
+    <app-vehicule-summary *ngFor="let vehicule of vehicules" [vehicule]="vehicule" (userClick)="userClickedOnVehicule($event)"> 
+    </app-vehicule-summary>
+  </div>
+

@@ -1,14 +1,18 @@
-<p><a (click)="goBackButtonPressed()" style='cursor: pointer'>Go Back</a>
-  <a (click)="editButtonPressed()" style='cursor: pointer'>Edit </a>
-  <a (click)="deleteButtonPressed()" style='cursor: pointer'>Delete</a></p>
-<div class='vehicule panel panel-default'>
-  <div class="panel-heading">
+
+  <app-top-page></app-top-page>
+  
+  
+  <button pButton type="button" label="Modifier"  (click)="editButtonPressed()" > </button>
+  <button pButton type="button" label="Supprimer"  (click)="deleteButtonPressed()" > </button>
+
+  <div class='vehicule panel panel-default' text-align='center' margin='0 auto'>
+  
     <h3 class="panel-title">{{ vehicule.marque }}</h3>
   </div>
   
 <p>{{ vehicule.type }}</p>
 <div>
-  <div class=" data-title">Nombre de place :</div>
+  <div class=" data-title"> <b>Nombre de place :</b></div>
   <div>{{ vehicule.nombrePlaces }}</div>
   <div class="data-title">Consommation (pour 100km) : </div>
   <div>{{ vehicule.consommation }}</div>
@@ -22,3 +26,4 @@
   <div>{{ vehicule.prix }}</div>
 </div>
 
+<button pButton type="button" label="Retour"  (click)="goBackButtonPressed()" > </button>

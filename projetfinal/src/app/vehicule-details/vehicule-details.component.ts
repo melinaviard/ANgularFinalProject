@@ -22,15 +22,6 @@ vehicules: Vehicule[];
     });
   }
 
-  // findVehiculeById(id: number): Vehicule {
-  //   for (const vehicule of this.vehicules) {
-  //     if ( vehicule.id_vehicule === id) {
-  //       return vehicule;
-  //     }
-  //   }
-  //   return null;
-  // }
-
   goBackButtonPressed(): void {
     this.location.back();
   }

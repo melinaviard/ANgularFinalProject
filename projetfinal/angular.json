@@ -24,8 +24,11 @@
             ],
             "styles": [
               "src/styles.css",
-              "bs/bootstrap-4.3.1-dist/css/bootstrap.css"
-            ],
+              "src/bs/css/bootstrap.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeng/resources/primeng.css"
+                      ],
             "scripts": [],
             "es5BrowserSupport": true
           },
