@@ -23,3 +23,7 @@ $ git clone https://github.com/melinaviard/AngularFinalProject.git
 
 - Angular
 - Visual Studio Code 1.3 or higher
+
+## Authors
+- Melina Viard
+- Valentin Gonzalez
