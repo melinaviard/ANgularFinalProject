@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Reservation } from './model/reservation';
+import { Vehicule } from './model/vehicule';
+
 
 
 @Component({
@@ -9,4 +11,5 @@ import { Reservation } from './model/reservation';
 })
 export class AppComponent {
 reservation: Reservation;
+vehicule: Vehicule;
 }

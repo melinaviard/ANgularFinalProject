@@ -156,6 +156,15 @@ div#div0 {
     text-align: center;
 }
 
+div#corps{
+    text-align: center;
+    margin-top: 20px;
+}
+
+div#pb {
+    margin-top: 10px;
+    
+}
 
 div#p0 {
     font-size: 15px;

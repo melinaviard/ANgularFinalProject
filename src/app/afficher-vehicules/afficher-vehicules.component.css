@@ -1,0 +1,38 @@
+div#vehicule{
+    border: 2px solid rgb(63, 61, 61);
+    float: left;
+    height: 250px;
+    width: 320px;
+    text-align: center;
+    margin-top: 10px;
+  
+}
+
+div#ssVehicule {
+    height: 200px;
+    
+}
+div#ssVehicule0 {
+    height: 120px;
+   
+}
+
+div#marque {
+   margin-top: 0px;
+font-size: 20px;
+font-weight: bold
+}
+
+div#prix {
+    margin-top: 0px;
+ font-size: 20px;
+ font-weight: bold
+ }
+
+div#boutonChoisir {
+    margin-top: 20px;
+}
+div#photo img{
+    width: 150px;
+    height: 150 px
+}

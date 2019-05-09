@@ -25,10 +25,10 @@ public deleteVehicule(vehicule: Vehicule): Observable<any> {
   return this.http.delete<Vehicule>(RECIPE_SERVER + '/vehicule/deletevehicule/' + vehicule.id_vehicule,
   this.httpOptions);
 }
-public getVehiculeById(id: number): Observable<any> {
+public getVehiculesById(id: number): Observable<any> {
   return this.http.get<Vehicule>(RECIPE_SERVER + '/vehicule/findbyid/' + id);
 }
-public addVehicule(vehicule: Vehicule): Observable<any> { //2 arguments min dans une requete post. Ici on en a mis 3 : 
+public addVehicule(vehicule: Vehicule): Observable<any> {
   return this.http.post<Vehicule>(RECIPE_SERVER + '/vehicule/addVehicule', JSON.stringify(vehicule), this.httpOptions);
 }
 
@@ -36,8 +36,8 @@ public updateVehicule(vehicule: Vehicule): Observable<any> {
   return this.http.put<Vehicule>(RECIPE_SERVER + '/vehicule/update', JSON.stringify(vehicule), this.httpOptions);
 }
 
-public getVehiculeByType(vehicule: Vehicule): Observable<any>{
-    return this.http.get<Vehicule>(RECIPE_SERVER + '/findbytype/' + vehicule.type);
+public getVehiculeByType(type: string): Observable<any> {
+    return this.http.get<Vehicule>(RECIPE_SERVER + '/findbytype/' + type);
 }
 
 public getVehiculeByNombrePlaces(vehicule: Vehicule): Observable<any> {

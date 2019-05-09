@@ -1,0 +1,158 @@
+<div id="corps">
+  <div id="resumeVehicule">
+    <div id="texteVehicule"> Vous avez sélectionné le véhicule suivant : </div>
+    <div id="photo"> <img src="/assets/{{ vehicule?.marque}}.jpg" /> </div>
+    <div id="marque">
+
+      {{ vehicule?.marque }}
+    </div>
+
+  </div>
+  <!--fin div vehicule -->
+
+
+
+
+
+  <div id="dates">
+    <div id="dateDebut">
+      date d'emprunt du véhicule :
+      <p-calendar [(ngModel)]="reservation.dateDebut" showTime="true" hourFormat="24" required></p-calendar>
+     <!-- message erreur si pas rempli -->
+    </div>
+       <app-print-error [control]="dateDebut"></app-print-error>
+       
+
+    <div id="dateFin">
+      date de retour du véhicule :
+      <p-calendar [(ngModel)]="reservation.dateFin" showTime="true" hourFormat="24" required></p-calendar>
+
+    </div>
+  </div>
+
+  
+<!-- <div id="agences"> -->
+    <div id="agenceDebut">
+      <div id="Titre"> Agence de départ : </div>
+      <!-- <select class="form-control" name="agenceDebut" required [(ngModel)]="reservation.agenceDebut">
+        <option [value]=Lyon [(ngModel)]="reservation.agenceDebut">Lyon</option>
+        <option  [value]="Brest" [(ngModel)]="reservation.agenceDebut">Brest</option>
+        <option  [value]="Paris" [(ngModel)]="reservation.agenceDebut">Paris</option>
+        <option  [value]="Marseille" [(ngModel)]="reservation.agenceDebut">Marseille</option>
+        <option  [value]="Strasbourg" [(ngModel)]="reservation.agenceDebut">Strasbourg</option>
+        <option  [value]="Montpellier" [(ngModel)]="reservation.agenceDebut">Montpellier</option>
+        <option   [value]="Lille" [(ngModel)]="reservation.agenceDebut">Lille</option>
+        <option   [value]="Bourges" [(ngModel)]="reservation.agenceDebut">Bourges</option>
+        <option   [value]="Clermont" [(ngModel)]="reservation.agenceDebut"> Clermont</option>
+        <option   [value]="Tulle" [(ngModel)]="reservation.agenceDebut">Tulle</option>
+
+      </select> -->
+
+      <p-dropdown [options]="agences"  [(ngModel)]="reservation.agenceDebut"   optionLabel="ville" ></p-dropdown>
+
+
+      <!-- <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City" optionLabel="name" [showClear]="true"></p-dropdown>
+      <p>Selected City: {{selectedCity ? selectedCity.name : 'none'}}</p> -->
+
+
+
+    </div> 
+
+
+    <!-- <div class="agenceFin"> -->
+
+    <!-- Menu deroulant pour agence fin -->
+    <div id="agenceFin">
+      <div id="Titre"> Agence de Retour : </div>
+      <!-- <select class="form-control" name="agenceFin" required [(ngModel)]="reservation.agenceFin">
+        <option  [value]="Lyon">Lyon</option>
+        <option [value]="Brest">Brest</option>
+        <option  [value]="Paris">Paris</option>
+        <option  [value]="Marseille">Marseille</option>
+        <option  [value]="Strasbourg">Strasbourg</option>
+        <option  [value]="Montpellier">Montpellier</option>
+        <option  [value]="Lille">Lille</option>
+        <option [value]="Bourges">Bourges</option>
+        <option [value]="Clermont">Clermont</option>
+        <option  [value]="Tulle">Tulle</option>
+
+      </select> -->
+      <p-dropdown [options]="agences"  [(ngModel)]="reservation.agenceFin"   optionLabel="ville" ></p-dropdown>
+    
+
+    </div>
+  <!-- fin agences -->
+  
+  <!-- <div class="form-group">
+      <label for="agence">Agence de départ</label>
+      <select class="form-control" id="agenceDebut" required>
+        <option *ngFor="let agence of agences" [value]="agence"></option>
+      </select>
+    </div> -->
+
+  <div id="nomprenom">
+    <div id="nom">
+      Votre nom :
+      <!-- <input class="form-control" [(ngModel)]="client.nom" type="text" placeholder="Nom"
+          name="title" /> -->
+      <input class="form-control" type="text" placeholder="Nom"  [(ngModel)]="client.nom" name="title" />
+    </div>
+
+    <div id="prenom">
+      Votre prénom :
+      <!-- <input class="form-control" [(ngModel)]="client.nom" type="text" placeholder="Nom"
+            name="title" /> -->
+      <input class="form-control" type="text" placeholder="Prénom" name="title" />
+    </div>
+  </div> <!-- fin nom prenom-->
+
+  <div id="permis">
+    Année d'obtention du permis B :
+    <!-- <input class="form-control" [(ngModel)]="client.nom" type="text" placeholder="Nom"
+              name="title" /> -->
+    <input class="form-control" type="text" placeholder="AAAA ex.: 2019" name="title" />
+  </div>
+
+  <div id="tel">
+    Téléphone :
+    <!-- <input class="form-control" [(ngModel)]="client.nom" type="text" placeholder="Nom"
+                  name="title" /> -->
+    <input class="form-control" type="text" placeholder="Téléphone" name="title" />
+  </div>
+
+  <div id="mail">
+    Adresse e-mail :
+    <input class="form-control" [(ngModel)]="mail" type="text" placeholder="Email"
+                      name="title" />
+     <!-- message d'erreur -->
+</div>
+
+
+  <div id="adresse">
+    Adresse postale :
+    <!-- <input class="form-control" [(ngModel)]="client.nom" type="text" placeholder="Nom"
+                 name="title" /> -->
+    <input id="inputadd"  type="text" placeholder="Adresse" name="title" />
+  </div>
+
+  <div id="boutonOK">
+      <!-- <input type="button" value="Confirmer la réservation"  (click)="openBottomSheet()  /> -->
+        <input type="button" value="Confirmer la réservation" (click)="addResa()"/>
+<!-- message-->
+<!-- <p-messages [(value)]="msgs"></p-messages> -->
+    </div>
+
+  <div id="boutonRetour">
+      <input type="button" value="Retour" (click)="goBack()" />
+    </div>
+
+
+</div>
+
+<!-- 
+<mat-form-field class="example-full-width">
+    <input matInput [calendar]="myFilter" [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+<button mat-raised-button (click)="openDialog()">Pick one</button> -->

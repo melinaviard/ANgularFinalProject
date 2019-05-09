@@ -1,0 +1,89 @@
+div#corps{
+    border: 2px solid rgb(63, 61, 61);
+    margin-top: 15px;
+    text-align: center;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 20px;
+    height: 300px;
+}
+
+div#photo img {
+    float: left;
+    height: 150px;
+    width: 250px;
+}
+
+div#marque {
+    font-weight: bold;
+margin-bottom: 25px;
+    }
+
+    div#dateDebut{
+        float: left;
+    }
+
+    div#dateFin {
+        float: right;
+        
+    }
+
+    div#agenceDebut {
+        float: left;
+        margin-left: 100px;
+    }
+
+    div#agenceFin {
+        float: right;
+        margin-right: 150px;
+    }
+
+    div#nom {
+        margin-left: 100px;
+        float: left;
+        margin-top: 20px
+    }
+    
+    div#prenom {
+        margin-right: 100px;
+        float: right;
+        margin-top: 20px;
+    }
+
+div#permis {
+    margin-left: 150px;
+    margin-top: 10px;
+    float: left;
+}
+
+div#tel  {
+    margin-left: 250px;
+    margin-top: 10px;
+    float: left;
+}
+
+div#mail  {
+    margin-right: 150px;
+    margin-top: 10px;
+    float: right;
+}
+
+div#adresse {
+    margin-left: 250px;
+    margin-top: 10px;
+    float: left;
+}
+div#inputadd input{
+    width: 100px
+}
+div#boutonOK {
+    
+    margin-top: 50px;
+    float: left;
+}
+
+div#boutonRetour {
+    margin-right: 170px;
+    margin-top: 50px;
+    float: right;
+}

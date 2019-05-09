@@ -1,0 +1,16 @@
+
+<div id="vehicule">
+  <div id="ssVehicule">
+    <div id="ssVehicule0"> 
+<div id="photo"> <img  src= "/assets/{{ vehicule.marque}}.jpg" /> </div>
+</div>
+<div id="marque">{{ vehicule.marque }}</div>
+<div id="places">{{ vehicule.nombrePlaces }} places </div>
+<div id="conso">Consommation : {{ vehicule.consommation }} l/100 kms </div>
+<div id="prix"> {{ vehicule.prix }} €   / jour </div>
+</div>
+
+<div id="boutonChoisir">
+    <input type="button" value="Choisir ce véhicule" (click)="choisirVehicule($event)" />
+  </div>
+</div>
