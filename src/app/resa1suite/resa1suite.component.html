@@ -129,23 +129,27 @@
 
 
   <div id="adresse">
-    Adresse postale :
+    Adresse postale : </div>
     <!-- <input class="form-control" [(ngModel)]="client.nom" type="text" placeholder="Nom"
                  name="title" /> -->
-    <input id="inputadd"  type="text" placeholder="Adresse" name="title" />
+    <div id="adresse"> <input id="inputadd"  type="text" placeholder="Adresse" name="title" />
   </div>
+
+  <div></div>
 
   <div id="boutonOK">
       <!-- <input type="button" value="Confirmer la réservation"  (click)="openBottomSheet()  /> -->
-        <input type="button" value="Confirmer la réservation" (click)="addResa()"/>
-<!-- message-->
+        <input type="button" value="Confirmer la réservation" (click)="addResa()"/> </div>
+        <div id="boutonRetour">
+          
+          <input type="button" value="Retour" (click)="goBack()" /> </div>
+          <p-messages [(value)]="msgs"></p-messages>
+
+        <!-- message-->
 <!-- <p-messages [(value)]="msgs"></p-messages> -->
-    </div>
+    
 
-  <div id="boutonRetour">
-      <input type="button" value="Retour" (click)="goBack()" />
-    </div>
-
+ 
 
 </div>
 

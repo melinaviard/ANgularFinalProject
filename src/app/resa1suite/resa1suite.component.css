@@ -2,10 +2,11 @@ div#corps{
     border: 2px solid rgb(63, 61, 61);
     margin-top: 15px;
     text-align: center;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: 18%;
+    margin-left: 18%;
     padding: 20px;
-    height: 300px;
+    height: 600px;
+    
 }
 
 div#photo img {
@@ -30,34 +31,36 @@ margin-bottom: 25px;
 
     div#agenceDebut {
         float: left;
-        margin-left: 100px;
+        margin-left: 80px;
+        margin-top: 20px;
     }
 
     div#agenceFin {
         float: right;
         margin-right: 150px;
+        margin-top: 20px;
     }
 
     div#nom {
-        margin-left: 100px;
+        margin-left: 320px;
         float: left;
         margin-top: 20px
     }
     
     div#prenom {
-        margin-right: 100px;
+        margin-right: 150px;
         float: right;
         margin-top: 20px;
     }
 
 div#permis {
-    margin-left: 150px;
+    margin-left: 320px;
     margin-top: 10px;
     float: left;
 }
 
 div#tel  {
-    margin-left: 250px;
+    margin-left: 165px;
     margin-top: 10px;
     float: left;
 }
@@ -69,7 +72,7 @@ div#mail  {
 }
 
 div#adresse {
-    margin-left: 250px;
+    margin-left: 320px;
     margin-top: 10px;
     float: left;
 }
@@ -79,11 +82,12 @@ div#inputadd input{
 div#boutonOK {
     
     margin-top: 50px;
-    float: left;
+    float: right;
+   
 }
 
 div#boutonRetour {
-    margin-right: 170px;
+    margin-right: 150px;
     margin-top: 50px;
-    float: right;
+    float: left;
 }

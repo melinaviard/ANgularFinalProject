@@ -27,6 +27,7 @@ import {CalendarModule} from 'primeng/calendar';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +59,6 @@ import {MessageModule} from 'primeng/message';
       // Paths resa
       {
         path: 'reservation/addreservation',
-        // ici pas d'id, ce qui veut dire qu'on a cliqué sur ajout
         component: Resa2Component
       },
 

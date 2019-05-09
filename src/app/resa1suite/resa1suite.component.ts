@@ -95,8 +95,9 @@ export class Resa1suiteComponent implements OnInit {
   }
 
 
+
   public addResa(reservation: Reservation): void {
-    //reservation.vehicule = this.vehicule;
+    this.reservation.vehicule = this.vehicule;
     this.ResaService.createResa(this.reservation).subscribe(
       (response) => {
         this.router.navigateByUrl('');
