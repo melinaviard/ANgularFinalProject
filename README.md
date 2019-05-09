@@ -4,16 +4,19 @@ Our theme is the transport. So we decide to do a web application for car's renti
 In a sprint of one and a half week, we manage to do all the backend, we run units test for two controllers (Client and Vehicule), one DAO (Reservation) and we work in TDD for the Service (Client).
 
 
-##Getting Started
+## Getting Started
 
-These instructions ill get you a copy of the project up and running on your local mahcine so u can use it. 
+These instructions will get you a copy of the project up and running on your local mahcine so you can use it. 
+You can see our introduction here :https://drive.google.com/drive/folders/1mNWgLwMcIt61dlvkF8o_RUHHiEvWetYZ?usp=sharing
 
 
-## Development server
+## Prerequisites
+To install and run this project you need as requirements : 
+- Java JDK and JRE - Java 8 or a higher version
+- Maven - Maven2 or a higher version
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-The first page has the path : "accueil". A void path goes equally to the Accueil. 
-## Code scaffolding
+## Setting up
+To download the project, clone it from github using the next command
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
