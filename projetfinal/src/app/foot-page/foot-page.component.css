@@ -4,8 +4,6 @@ div.cover-photo-holder img {
    margin: 5px
 }
 
-
-
 div.imgFooter0 img {
    width: 100px;
    height: 100px;
@@ -29,9 +27,6 @@ width: 320px;
    height: 210px;
 
 }
-div#titre {
-   text-align:center;
-}
 
 div#menu {
    background-color: rgb(63, 61, 61);
@@ -53,19 +48,13 @@ font-size: 20px;
 text-align: center;
 font-family:  Verdana, Geneva, Tahoma, sans-serif
 }
-div#bandeau-text{
-   color: rgb(88, 85, 85);
-font-size: 20px;
-float: right;
-
-}
 
 
 div#finmenu {
-   color: red;
+   color: yellow;
    font-size: 11px;
 text-align: right;
-
+margin-right: 70px;
 }
 
 div#ligne {
@@ -148,6 +137,12 @@ div#header-div {
    padding: 10px;
 
 }
+div#formulaire {
+   text-align: center; 
+   border: solid 2px #000000;
+    width: 40%;
+    margin: 0 auto;
+}
 div#header {
    border: 2px solid rgb(63, 61, 61);
 height: 190px;
@@ -160,7 +155,7 @@ float: left;
 margin-top: 0 px
 }
 div#div0 {
-   border: 2px solid rgb(63, 61, 61);
+   border: 2px solid rgb(2, 1, 1);
    /* background-color: rgb(175, 171, 170); */
    /* float: left; */
    /* max-width: 250px; */
@@ -268,4 +263,11 @@ div#agence {
    div#instructions, div#ingredients {
        min-height: 500px;
    }
+   div#label
+{
+  display: block;
+  width: 150px;
+  float: left;
+}
+
 }

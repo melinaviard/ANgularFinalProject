@@ -18,7 +18,7 @@ export class VehiculeListComponent implements OnInit {
   constructor(private router: Router, private vehciuleService: VehiculeServiceService) {
   this.new_vehicule = Vehicule.createBlank();
   this.getAllVehicules();
-}
+  }
   ngOnInit() {
   }
 

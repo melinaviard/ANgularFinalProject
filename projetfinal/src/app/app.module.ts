@@ -17,6 +17,15 @@ import {ButtonModule} from 'primeng/button';
 import {CarouselModule} from 'primeng/carousel';
 import { TopPageComponent } from './top-page/top-page.component';
 import {PanelModule} from 'primeng/panel';
+import {FieldsetModule} from 'primeng/fieldset';
+import {CardModule} from 'primeng/card';
+import {ScrollPanelModule} from 'primeng/scrollpanel';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {DataViewModule} from 'primeng/dataview';
+import { FootPageComponent } from './foot-page/foot-page.component';
+
+
+
 
 
 @NgModule({
@@ -29,17 +38,23 @@ import {PanelModule} from 'primeng/panel';
     VehiculeDetailsComponent,
     EditNewVehiculeComponent,
     WelcomeGestionnaireComponent,
-    TopPageComponent
+    TopPageComponent,
+    FootPageComponent
   ],
   imports: [
     BrowserModule,
+    InputTextareaModule,
+    CardModule,
+    ScrollPanelModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     CarouselModule,
     ButtonModule,
+    FieldsetModule,
     HttpClientModule,
     PanelModule,
+    DataViewModule,
     RouterModule.forRoot([
       // Paths resa
       {

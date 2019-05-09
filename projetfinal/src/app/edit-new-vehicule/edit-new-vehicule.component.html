@@ -1,54 +1,57 @@
 <app-top-page></app-top-page>
 
-<div class="newvehicule panel panel-default">
-  <div class="panel-heading">
-    <h4>Ajouter un vehicule</h4>
-  </div>
-  
-    <div class="panel-body">
-        <div id="formulaire">
+ 
+ 
+
+    <div id="corps">
+  <div id="header"> Ajouter un véhicule</div>
+  <!-- <div id="emplacement"> Ce véhicule se trouve à l'agence de : {{ new_vehicule.emplacement}} </div> -->
+
+    <div id="formulaire"> 
+          <div class="ui-g-6">
             <div class="input-group">
-          <span class="input-group-addon">Type : </span>
-        <input class="form-control" [(ngModel)]="new_vehicule.type" type="text" placeholder="Type" name="type" />
+          <span class="input-group-addon"><h5>Type</h5></span>
+          <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize" [(ngModel)]="new_vehicule.type" type="text" name="type" ></textarea>
       </div><br><br>
         <div class="input-group">
           <span class="input-group-addon"><h5>Marque</h5></span>
-        <textarea row="5" [(ngModel)]="new_vehicule.marque" class="form-control" placeholder="Marque"
+          <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize" [(ngModel)]="new_vehicule.marque"  
           name="marque"></textarea>
       </div><br><br>
       <div class="input-group">
           <span class="input-group-addon"><h5>Places</h5></span>
-        <input type="text" class="form-control" [(ngModel)]="new_vehicule.nombrePlaces" placeholder="Nombre de place"
-          name="nombrePlaces" />
+          <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize" [(ngModel)]="new_vehicule.nombrePlaces" 
+          name="nombrePlaces" ></textarea>
       </div><br><br>
       <div class="input-group">
           <span class="input-group-addon"><h5>Consommation (L/100Km)</h5></span>
-        <input type="text" class="form-control" [(ngModel)]="new_vehicule.consommation" placeholder="Consommation"
-          name="consommation" />
+          <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize" [(ngModel)]="new_vehicule.consommation" 
+          name="consommation" ></textarea></div>
       </div><br><br>
+      <div class="ui-g-6">
       <div class="input-group">
           <span class="input-group-addon"> <h5>Emplacement </h5> </span>
-        <input type="text" class="form-control" [(ngModel)]="new_vehicule.emplacement" placeholder="Emplacement"
-          name="emplacement" />
+          <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize" [(ngModel)]="new_vehicule.emplacement" 
+          name="emplacement" ></textarea>
       </div><br><br>
       <div class="input-group">
           <span class="input-group-addon"> <h5>Disponibilite </h5> </span>
-        <input type="text" class="form-control" [(ngModel)]="new_vehicule.disponibilite" placeholder="Disponibilite"
-          name="disponibilite" />
+          <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize" [(ngModel)]="new_vehicule.disponibilite"
+          name="disponibilite" ></textarea>
       </div><br><br>
       <div class="input-group">
           <span class="input-group-addon"> <h5>Etat des lieux</h5></span>
-        <input type="text" class="form-control" [(ngModel)]="new_vehicule.etatLieu" placeholder="Etat des lieux"
-          name="etatLieu" />
+          <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize" [(ngModel)]="new_vehicule.etatLieu"
+          name="etatLieu"></textarea>
       </div><br><br>
       <div class="input-group">
           <span class="input-group-addon"> <h5>Prix</h5> </span>
-        <input type="text" class="form-control" [(ngModel)]="new_vehicule.prix" placeholder="Prix à la journée"
-          name="prix" />
-      </div><br><br>
-        </div>
+          <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize" [(ngModel)]="new_vehicule.prix" name="prix"></textarea>
+      </div><br><br></div>
 
-      <div >
+      <div id="bouton">
         <input type="button" value="Add Vehicule" (click)="addUpdateVehiculeClicked()" />
       </div>
     </div>
+  </div> <!-- Fin corps-->
+   ++

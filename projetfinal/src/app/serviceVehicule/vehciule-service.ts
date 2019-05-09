@@ -28,7 +28,7 @@ public deleteVehicule(vehicule: Vehicule): Observable<any> {
 public getVehiculeById(id: number): Observable<any> {
   return this.http.get<Vehicule>(RECIPE_SERVER + '/vehicule/findbyid/' + id);
 }
-public addVehicule(vehicule: Vehicule): Observable<any> { //2 arguments min dans une requete post. Ici on en a mis 3 : 
+public addVehicule(vehicule: Vehicule): Observable<any> {
   return this.http.post<Vehicule>(RECIPE_SERVER + '/vehicule/addVehicule', JSON.stringify(vehicule), this.httpOptions);
 }
 

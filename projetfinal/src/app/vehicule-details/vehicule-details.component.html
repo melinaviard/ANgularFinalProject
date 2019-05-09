@@ -2,28 +2,28 @@
   <app-top-page></app-top-page>
   
   
-  <button pButton type="button" label="Modifier"  (click)="editButtonPressed()" > </button>
-  <button pButton type="button" label="Supprimer"  (click)="deleteButtonPressed()" > </button>
+  
 
-  <div class='vehicule panel panel-default' text-align='center' margin='0 auto'>
   
-    <h3 class="panel-title">{{ vehicule.marque }}</h3>
-  </div>
+    <h3 class="panel-title"> Fiche véhicule : {{ vehicule.marque }}</h3>
   
+    
+        <p-card header="{{ vehicule.marque }}" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+          <p-header>
+          <img src="assets/{{vehicule.marque}}.jpg" width='50%'>
+      </p-header>
 <p>{{ vehicule.type }}</p>
-<div>
-  <div class=" data-title"> <b>Nombre de place :</b></div>
-  <div>{{ vehicule.nombrePlaces }}</div>
-  <div class="data-title">Consommation (pour 100km) : </div>
-  <div>{{ vehicule.consommation }}</div>
-  <div class="data-title">Emplacement physique : </div>
-  <div>{{ vehicule.emplacement }}</div>
-  <div class="data-title">Disponibilité : </div>
-  <div>{{ vehicule.disponibilite }}</div>
-  <div class="data-title">Commentaires de l'etat des lieux : </div>
-  <div>{{ vehicule.etatLieu }}</div>
-  <div class="data-title">Prix : </div>
-  <div>{{ vehicule.prix }}</div>
-</div>
 
-<button pButton type="button" label="Retour"  (click)="goBackButtonPressed()" > </button>
+  <ul>
+ <li> Nombre de place : {{ vehicule.nombrePlaces }}</li>
+ <li>Consommation (pour 100km) : {{ vehicule.consommation }}</li>
+ <li>Emplacement physique : {{ vehicule.emplacement }}</li>
+ <li>Disponibilité : {{ vehicule.disponibilite }}</li>
+ <li>Commentaires de l'etat des lieux : {{ vehicule.etatLieu }}</li>
+ <li>Prix : {{ vehicule.prix }}</li>
+</ul>
+<p-footer><button pButton type="button" label="Modifier" class="ui-button-raised ui-button-secondary"  (click)="editButtonPressed()" > </button>
+  <button pButton type="button" label="Supprimer" class="ui-button-raised ui-button-secondary" (click)="deleteButtonPressed()" > </button></p-footer>
+</p-card>
+
+<button pButton type="button" label="Retour" class="ui-button-raised ui-button-secondary" (click)="goBackButtonPressed()" > </button>

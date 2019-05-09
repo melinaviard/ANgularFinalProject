@@ -15,5 +15,9 @@ export class WelcomeGestionnaireComponent implements OnInit {
 public goListeVehicule() {
 this.router.navigateByUrl('/vehicule');
 }
+
+public goAccueil(){
+  this.router.navigateByUrl('');
+  }
 }
 
