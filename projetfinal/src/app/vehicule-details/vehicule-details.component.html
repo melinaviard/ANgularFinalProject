@@ -1,0 +1,29 @@
+
+  <app-top-page></app-top-page>
+  
+  
+  
+
+  
+    <h3 class="panel-title"> Fiche véhicule : {{ vehicule.marque }}</h3>
+  
+    
+        <p-card header="{{ vehicule.marque }}" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+          <p-header>
+          <img src="assets/{{vehicule.marque}}.jpg" width='50%'>
+      </p-header>
+<p>{{ vehicule.type }}</p>
+
+  <ul>
+ <li> Nombre de place : {{ vehicule.nombrePlaces }}</li>
+ <li>Consommation (pour 100km) : {{ vehicule.consommation }}</li>
+ <li>Emplacement physique : {{ vehicule.emplacement }}</li>
+ <li>Disponibilité : {{ vehicule.disponibilite }}</li>
+ <li>Commentaires de l'etat des lieux : {{ vehicule.etatLieu }}</li>
+ <li>Prix : {{ vehicule.prix }}</li>
+</ul>
+<p-footer><button pButton type="button" label="Modifier" class="ui-button-raised ui-button-secondary"  (click)="editButtonPressed()" > </button>
+  <button pButton type="button" label="Supprimer" class="ui-button-raised ui-button-secondary" (click)="deleteButtonPressed()" > </button></p-footer>
+</p-card>
+
+<button pButton type="button" label="Retour" class="ui-button-raised ui-button-secondary" (click)="goBackButtonPressed()" > </button>

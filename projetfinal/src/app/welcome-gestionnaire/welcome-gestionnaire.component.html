@@ -1,0 +1,30 @@
+<app-top-page></app-top-page>
+    
+        
+<div id="corps">
+           <div id="head">  
+              <div id="titre">Espace Gestionnaire</div>   
+              <div id="sedeco"> <button pButton class="ui-button-raised ui-button-secondary" (click)="goAccueil()" label=" Se deconnecter "> </button></div> 
+           </div>       
+         
+<div id="colonne"> 
+          <div id="bouton" >
+              <div><a (click)="goListeVehicule()" style='cursor: pointer'>Liste des véhicules</a>  </div>
+              <div><a (click)="goListeVehicule()" style='cursor: pointer'>Liste des réservations</a> </div>
+              <div> <a (click)="goListeVehicule()" style='cursor: pointer'>Rechercher un client</a> </div>
+                <div> <a (click)="goListeVehicule()" style='cursor: pointer'>Modifier compte</a> </div>
+                  <div> <a (click)="goListeVehicule()" style='cursor: pointer'> Actualités </a> </div>
+             
+            </div>
+              </div> <!-- fin colonne-->
+
+              <div id="nocolonne">
+                  <div id="image"> <img  src="{{ '/assets/logo.jpg' }} " />
+                  </div>
+
+              </div>
+
+              </div> <!-- fin corps-->
+          
+
+              <app-foot-page></app-foot-page>
