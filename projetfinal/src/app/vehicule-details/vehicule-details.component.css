@@ -1,0 +1,15 @@
+div#header {
+    text-align: center;
+    font-weight: bold;
+}
+
+div#corps {
+    
+    margin-top: 10px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+div#bouton {
+    margin-left: 45%;
+}
