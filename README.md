@@ -6,11 +6,13 @@ For the frontend, we are using Angular. We create the front for the Reservation'
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local mahcine so you can use it. 
-You can see our introduction here :https://drive.google.com/drive/folders/1mNWgLwMcIt61dlvkF8o_RUHHiEvWetYZ?usp=sharing
+You can see our introduction here : https://drive.google.com/drive/folders/1mNWgLwMcIt61dlvkF8o_RUHHiEvWetYZ?usp=sharing
 
 
 ## Prerequisites
 To install and run this project you need as requirements : 
+- Java JDK and JRE - Java 8 or higher version
+- Maven - Maven 2 or higher version
 
 
 ## Setting up
