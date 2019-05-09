@@ -16,7 +16,7 @@ public goListeVehicule() {
 this.router.navigateByUrl('/vehicule');
 }
 
-public goAccueil(){
+public goAccueil() { // juste ajouté un espace
   this.router.navigateByUrl('');
   }
 }

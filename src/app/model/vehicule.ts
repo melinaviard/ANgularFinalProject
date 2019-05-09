@@ -13,7 +13,7 @@ export class Vehicule {
     public photo: string;
     public prix: number;
 
-
+// Laisser disponibilité en string car ce doit être des dates auxquelles le vehicule est dispo
     // tslint:disable-next-line:variable-name
     constructor(id_vehicule: number, type: string, marque: string, nombrePlaces: number,
                 consommation: number, emplacement: string, disponibilite: string,
