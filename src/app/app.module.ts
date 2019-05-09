@@ -50,6 +50,7 @@ import { FootPageComponent } from './foot-page/foot-page.component';
 @NgModule({
   declarations: [
     AppComponent,
+    Resa1Component,
     Resa2Component,
     ModifResaComponentComponent,
     AccueilComponent,
@@ -159,11 +160,7 @@ import { FootPageComponent } from './foot-page/foot-page.component';
     path: 'vehicule/:id_vehicule',
     component: VehiculeDetailsComponent
   },
-  {
-    path: '',
-    redirectTo: '/welcomegestionnaire',
-    pathMatch: 'full'
-  },
+
   {
     path: 'welcomegestionnaire',
     component: WelcomeGestionnaireComponent
