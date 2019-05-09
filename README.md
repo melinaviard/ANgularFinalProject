@@ -1,6 +1,13 @@
 # ProjetFinal
-This is the final project for ou JAVA formation.
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This is the final project for our JAVA formation.
+Our theme is the transport. So we decide to do a web application for car's renting. Our idea is to facilitate the use of the application for both the customer and the employees. 
+In a sprint of one and a half week, we manage to do all the backend, we run units test for two controllers (Client and Vehicule), one DAO (Reservation) and we work in TDD for the Service (Client).
+
+
+##Getting Started
+
+These instructions ill get you a copy of the project up and running on your local mahcine so u can use it. 
+
 
 ## Development server
 
